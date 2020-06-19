@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>dolo.algos.improved_time_iteration - Dolo</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet">
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css" rel="stylesheet">
+        <link href="../../../css/mkapi-common.css" rel="stylesheet">
+        <link href="../../../css/mkapi-mkdocs.css" rel="stylesheet">
+        <link href="../../../css/extra.css" rel="stylesheet">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Dolo</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../installation/" class="nav-link">Install</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../model_api.md" class="nav-link">Model API</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">API <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">dolo</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../dolo/" class="dropdown-item">dolo</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">dolo.algos</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../dolo.algos/" class="dropdown-item">dolo.algos</a>
+</li>
+            
+<li>
+    <a href="../../dolo.algos.improved_time_iteration/" class="dropdown-item">dolo.algos.improved_time_iteration</a>
+</li>
+            
+<li>
+    <a href="../../dolo.algos.time_iteration/" class="dropdown-item">dolo.algos.time_iteration</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">dolo.compiler</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../dolo.compiler/" class="dropdown-item">dolo.compiler</a>
+</li>
+            
+<li>
+    <a href="../../dolo.compiler.recipes/" class="dropdown-item">dolo.compiler.recipes</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">dolo.misc</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../dolo.misc/" class="dropdown-item">dolo.misc</a>
+</li>
+            
+<li>
+    <a href="../../dolo.misc.termcolor/" class="dropdown-item">dolo.misc.termcolor</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">dolo.numeric.discretization</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../dolo.numeric.discretization/" class="dropdown-item">dolo.numeric.discretization</a>
+</li>
+            
+<li>
+    <a href="../../dolo.numeric.discretization.discretization/" class="dropdown-item">dolo.numeric.discretization.discretization</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#doloalgosimproved_time_iteration" class="nav-link">dolo.algos.improved_time_iteration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<div class="mkapi-node">
+<h1 id="" class="mkapi-object mkapi-object-code plain">
+<span class="mkapi-object-kind mkapi-object-kind-code">SOURCE CODE</span>
+<span class="mkapi-object-prefix">dolo.algos.</span><span class="mkapi-object-name">improved_time_iteration</span>
+<span id="dolo.algos.improved_time_iteration"></span><a class="mkapi-docs-link" href="../../dolo.algos.improved_time_iteration">DOCS</a>
+</h1>
+
+<div class="mkapi-code">
+<div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;Do I need a docstring here ?&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">.bruteforce_lib</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">.invert</span> <span class="kn">import</span> <span class="o">*</span>
+
+
+<span class="kn">from</span> <span class="nn">dolo.numeric.decision_rule</span> <span class="kn">import</span> <span class="n">DecisionRule</span>
+<span class="kn">from</span> <span class="nn">dolo.misc.itprinter</span> <span class="kn">import</span> <span class="n">IterationsPrinter</span>
+<span class="kn">from</span> <span class="nn">numba</span> <span class="kn">import</span> <span class="n">jit</span>
+<span class="kn">import</span> <span class="nn">numpy</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">scipy.sparse.linalg</span>
+
+<span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">mul</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">reduce</span>
+
+<span class="kn">from</span> <span class="nn">dolo.numeric.optimize.newton</span> <span class="kn">import</span> <span class="n">SerialDifferentiableFunction</span>
+
+<span class="k">def</span> <span class="nf">prod</span><span class="p">(</span><span class="n">l</span><span class="p">):</span> <span class="k">return</span> <span class="n">reduce</span><span class="p">(</span><span class="n">mul</span><span class="p">,</span> <span class="n">l</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
+<span class="kn">from</span> <span class="nn">numba</span> <span class="kn">import</span> <span class="n">jit</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">array</span><span class="p">,</span> <span class="n">zeros</span>
+
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="nd">@jit</span>
+<span class="k">def</span> <span class="nf">inplace</span><span class="p">(</span><span class="n">Phi</span><span class="p">,</span> <span class="n">J</span><span class="p">):</span>
+    <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">e</span> <span class="o">=</span> <span class="n">J</span><span class="o">.</span><span class="n">shape</span>
+    <span class="k">for</span> <span class="n">i_a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">i_b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">i_c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+                <span class="k">for</span> <span class="n">i_d</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
+                    <span class="k">for</span> <span class="n">i_e</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">e</span><span class="p">):</span>
+                        <span class="n">J</span><span class="p">[</span><span class="n">i_a</span><span class="p">,</span><span class="n">i_b</span><span class="p">,</span><span class="n">i_c</span><span class="p">,</span><span class="n">i_d</span><span class="p">,</span><span class="n">i_e</span><span class="p">]</span> <span class="o">*=</span> <span class="n">Phi</span><span class="p">[</span><span class="n">i_a</span><span class="p">,</span><span class="n">i_c</span><span class="p">,</span><span class="n">i_d</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">smooth</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">dres</span><span class="p">,</span> <span class="n">jres</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+    <span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">sqrt</span>
+    <span class="c1"># jres is modified</span>
+    <span class="n">dinf</span> <span class="o">=</span> <span class="n">dx</span><span class="o">&gt;</span><span class="mi">100000</span>
+    <span class="n">n_m</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">n_x</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">shape</span>
+    <span class="n">sq</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span> <span class="n">res</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">dx</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="p">)</span>
+    <span class="n">H</span> <span class="o">=</span> <span class="n">res</span> <span class="o">+</span> <span class="p">(</span><span class="n">dx</span><span class="p">)</span> <span class="o">-</span> <span class="n">sq</span>
+    <span class="n">Phi_a</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">res</span><span class="o">/</span><span class="n">sq</span>
+    <span class="n">Phi_b</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">dx</span><span class="p">)</span><span class="o">/</span><span class="n">sq</span>
+    <span class="n">H</span><span class="p">[</span><span class="n">dinf</span><span class="p">]</span> <span class="o">=</span> <span class="n">res</span><span class="p">[</span><span class="n">dinf</span><span class="p">]</span>
+    <span class="n">Phi_a</span><span class="p">[</span><span class="n">dinf</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span>
+    <span class="n">Phi_b</span><span class="p">[</span><span class="n">dinf</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">H_x</span> <span class="o">=</span> <span class="n">Phi_a</span><span class="p">[:,:,:,</span><span class="kc">None</span><span class="p">]</span><span class="o">*</span><span class="n">dres</span>
+    <span class="k">for</span> <span class="n">i_x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_x</span><span class="p">):</span>
+        <span class="n">H_x</span><span class="p">[:,:,</span><span class="n">i_x</span><span class="p">,</span><span class="n">i_x</span><span class="p">]</span> <span class="o">+=</span> <span class="n">Phi_b</span><span class="p">[:,:,</span><span class="n">i_x</span><span class="p">]</span><span class="o">*</span><span class="n">pos</span>
+    <span class="c1"># H_xt = Phi_a[:,None,:,:,None]*jres</span>
+    <span class="n">inplace</span><span class="p">(</span><span class="n">Phi_a</span><span class="p">,</span> <span class="n">jres</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">H</span><span class="p">,</span> <span class="n">H_x</span><span class="p">,</span> <span class="n">jres</span>
+    <span class="c1"># return H, H_x, H_xt</span>
+
+<span class="k">def</span> <span class="nf">smooth_nodiff</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">dx</span><span class="p">):</span>
+    <span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">sqrt</span>
+    <span class="n">n_m</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">n_x</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">shape</span>
+    <span class="n">dinf</span> <span class="o">=</span> <span class="n">dx</span><span class="o">&gt;</span><span class="mi">100000</span>
+    <span class="n">sq</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span> <span class="n">res</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">dx</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="p">)</span>
+    <span class="n">H</span> <span class="o">=</span> <span class="n">res</span> <span class="o">+</span> <span class="p">(</span><span class="n">dx</span><span class="p">)</span> <span class="o">-</span> <span class="n">sq</span>
+    <span class="n">H</span><span class="p">[</span><span class="n">dinf</span><span class="p">]</span> <span class="o">=</span> <span class="n">res</span><span class="p">[</span><span class="n">dinf</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">H</span>
+
+
+<span class="nd">@jit</span>
+<span class="k">def</span> <span class="nf">ssmul</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">):</span>
+    <span class="c1"># simple serial_mult (matrix times vector)</span>
+    <span class="n">N</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">shape</span>
+    <span class="n">NN</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="n">B</span><span class="o">.</span><span class="n">shape</span>
+    <span class="n">O</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">N</span><span class="p">,</span><span class="n">a</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
+                <span class="n">O</span><span class="p">[</span><span class="n">n</span><span class="p">,</span><span class="n">k</span><span class="p">]</span> <span class="o">+=</span> <span class="n">A</span><span class="p">[</span><span class="n">n</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">l</span><span class="p">]</span><span class="o">*</span><span class="n">B</span><span class="p">[</span><span class="n">n</span><span class="p">,</span><span class="n">l</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">O</span>
+
+
+<span class="nd">@jit</span>
+<span class="k">def</span> <span class="nf">ssmul_inplace</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">O</span><span class="p">):</span>
+    <span class="c1"># simple serial_mult (matrix times vector)</span>
+    <span class="n">N</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">shape</span>
+    <span class="n">NN</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="n">B</span><span class="o">.</span><span class="n">shape</span>
+    <span class="c1"># O = numpy.zeros((N,a))</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
+                <span class="n">O</span><span class="p">[</span><span class="n">n</span><span class="p">,</span><span class="n">k</span><span class="p">]</span> <span class="o">+=</span> <span class="n">A</span><span class="p">[</span><span class="n">n</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">l</span><span class="p">]</span><span class="o">*</span><span class="n">B</span><span class="p">[</span><span class="n">n</span><span class="p">,</span><span class="n">l</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">O</span>
+
+<span class="c1"># make parallel using guvectorize ?</span>
+<span class="k">def</span> <span class="nf">d_filt_dx</span><span class="p">(</span><span class="n">π</span><span class="p">,</span><span class="n">M_ij</span><span class="p">,</span><span class="n">S_ij</span><span class="p">,</span><span class="n">n_m</span><span class="p">,</span><span class="n">N</span><span class="p">,</span><span class="n">n_x</span><span class="p">,</span><span class="n">dumdr</span><span class="p">):</span>
+    <span class="c1"># OK, so res is probably not what we need to filter here.</span>
+    <span class="c1">#s sh</span>
+    <span class="n">n_m</span><span class="p">,</span> <span class="n">n_im</span> <span class="o">=</span> <span class="n">M_ij</span><span class="o">.</span><span class="n">shape</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">dumdr</span><span class="o">.</span><span class="n">set_values</span><span class="p">(</span><span class="n">π</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_m</span><span class="p">):</span>
+        <span class="n">π</span><span class="p">[</span><span class="n">i</span><span class="p">,:,:]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_im</span><span class="p">):</span>
+            <span class="n">A</span> <span class="o">=</span> <span class="n">M_ij</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,:,:,:]</span>
+            <span class="n">B</span> <span class="o">=</span> <span class="n">dumdr</span><span class="o">.</span><span class="n">eval_ijs</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">S_ij</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,:,:])</span>
+            <span class="n">π</span><span class="p">[</span><span class="n">i</span><span class="p">,:,:]</span> <span class="o">+=</span> <span class="n">ssmul</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">π</span>
+
+<span class="kn">from</span> <span class="nn">scipy.sparse.linalg</span> <span class="kn">import</span> <span class="n">LinearOperator</span>
+
+<span class="k">class</span> <span class="nc">Operator</span><span class="p">(</span><span class="n">LinearOperator</span><span class="p">):</span><span id="dolo.algos.improved_time_iteration.Operator"></span><a class="mkapi-docs-link" title="dolo.algos.improved_time_iteration.Operator" href="../../dolo.algos.improved_time_iteration#dolo.algos.improved_time_iteration.Operator">DOCS</a>
+
+    <span class="sd">&quot;&quot;&quot;Special Linear Operator&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">M_ij</span><span class="p">,</span> <span class="n">S_ij</span><span class="p">,</span> <span class="n">dumdr</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">M_ij</span> <span class="o">=</span> <span class="n">M_ij</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">S_ij</span> <span class="o">=</span> <span class="n">S_ij</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_m</span> <span class="o">=</span> <span class="n">M_ij</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">N</span> <span class="o">=</span> <span class="n">M_ij</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_x</span> <span class="o">=</span> <span class="n">M_ij</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dumdr</span> <span class="o">=</span> <span class="n">dumdr</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dtype</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="s1">&#39;float64&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addid</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">shape</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">nn</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_m</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">N</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">n_x</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">nn</span><span class="p">,</span><span class="n">nn</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_matvec</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">xx</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">n_m</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">N</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span> <span class="n">n_x</span><span class="p">))</span>
+        <span class="n">yy</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">xx</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">addid</span><span class="p">:</span>
+            <span class="n">yy</span> <span class="o">=</span> <span class="n">xx</span><span class="o">-</span><span class="n">yy</span> <span class="c1"># preconditioned system</span>
+        <span class="k">return</span> <span class="n">yy</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">π</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="n">M_ij</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">M_ij</span>
+        <span class="n">S_ij</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">S_ij</span>
+        <span class="n">n_m</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_m</span>
+        <span class="n">N</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">N</span>
+        <span class="n">n_x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_x</span>
+        <span class="n">dumdr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dumdr</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">inplace</span><span class="p">:</span>
+            <span class="n">π</span> <span class="o">=</span> <span class="n">π</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">d_filt_dx</span><span class="p">(</span><span class="n">π</span><span class="p">,</span><span class="n">M_ij</span><span class="p">,</span><span class="n">S_ij</span><span class="p">,</span><span class="n">n_m</span><span class="p">,</span><span class="n">N</span><span class="p">,</span><span class="n">n_x</span><span class="p">,</span><span class="n">dumdr</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">as_matrix</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="n">arg</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">n_m</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">N</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">n_x</span><span class="p">))</span>
+        <span class="n">larg</span> <span class="o">=</span> <span class="n">arg</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+        <span class="n">N</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">larg</span><span class="p">)</span>
+        <span class="n">J</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">N</span><span class="p">,</span><span class="n">N</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">i</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+                <span class="n">larg</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
+            <span class="n">larg</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span>
+            <span class="n">J</span><span class="p">[:,</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">J</span>
+
+<span class="k">def</span> <span class="nf">invert_jac</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="n">dres</span><span class="p">,</span><span class="n">jres</span><span class="p">,</span><span class="n">fut_S</span><span class="p">,</span><span class="n">dumdr</span><span class="p">,</span><span class="n">tol</span><span class="o">=</span><span class="mf">1e-10</span><span class="p">,</span><span class="n">maxit</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span><span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+
+    <span class="n">n_m</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">n_x</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+
+    <span class="n">err0</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">ddx</span> <span class="o">=</span> <span class="n">solve_gu</span><span class="p">(</span><span class="n">dres</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span> <span class="n">res</span><span class="o">.</span><span class="n">copy</span><span class="p">())</span>
+
+    <span class="n">lam</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0</span>
+    <span class="n">lam_max</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0</span>
+    <span class="n">err_0</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">ddx</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+
+    <span class="n">tot</span> <span class="o">=</span> <span class="n">ddx</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Starting inversion&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">nn</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">maxit</span><span class="p">):</span>
+        <span class="c1"># operations are made in place in ddx</span>
+        <span class="n">ddx</span> <span class="o">=</span> <span class="n">d_filt_dx</span><span class="p">(</span><span class="n">ddx</span><span class="p">,</span><span class="n">jres</span><span class="p">,</span><span class="n">fut_S</span><span class="p">,</span><span class="n">n_m</span><span class="p">,</span><span class="n">N</span><span class="p">,</span><span class="n">n_x</span><span class="p">,</span><span class="n">dumdr</span><span class="p">)</span>
+        <span class="n">err</span> <span class="o">=</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">ddx</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+        <span class="n">lam</span> <span class="o">=</span> <span class="n">err</span><span class="o">/</span><span class="n">err_0</span>
+        <span class="n">lam_max</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">lam_max</span><span class="p">,</span> <span class="n">lam</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;- </span><span class="si">{}</span><span class="s1"> | </span><span class="si">{}</span><span class="s1"> | </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">err</span><span class="p">,</span> <span class="n">lam</span><span class="p">,</span> <span class="n">lam_max</span><span class="p">))</span>
+        <span class="n">tot</span> <span class="o">+=</span> <span class="n">ddx</span>
+        <span class="n">err_0</span> <span class="o">=</span> <span class="n">err</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">err</span><span class="o">&lt;</span><span class="n">tol</span><span class="p">):</span>
+            <span class="k">break</span>
+
+    <span class="c1"># tot += ddx*lam/(1-lam)</span>
+    <span class="k">return</span> <span class="n">tot</span><span class="p">,</span> <span class="n">nn</span><span class="p">,</span> <span class="n">lam</span>
+
+
+<span class="k">def</span> <span class="nf">radius_jac</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="n">dres</span><span class="p">,</span><span class="n">jres</span><span class="p">,</span><span class="n">fut_S</span><span class="p">,</span><span class="n">dumdr</span><span class="p">,</span><span class="n">tol</span><span class="o">=</span><span class="mf">1e-10</span><span class="p">,</span><span class="n">maxit</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span><span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+
+    <span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">sqrt</span>
+
+    <span class="n">n_m</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">n_x</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+
+    <span class="n">err0</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+    <span class="n">norm2</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">m</span><span class="p">:</span> <span class="n">sqrt</span><span class="p">((</span><span class="n">m</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+
+    <span class="kn">import</span> <span class="nn">numpy.random</span>
+    <span class="n">π</span> <span class="o">=</span> <span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span><span class="o">*</span><span class="mi">2</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="mi">1</span>
+    <span class="n">π</span> <span class="o">/=</span> <span class="n">norm2</span><span class="p">(</span><span class="n">π</span><span class="p">)</span>
+
+
+    <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span>
+    <span class="n">lam</span> <span class="o">=</span> <span class="mf">1.0</span>
+    <span class="n">lam_max</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+    <span class="n">lambdas</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Starting inversion&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">nn</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">maxit</span><span class="p">):</span>
+        <span class="c1"># operations are made in place in ddx</span>
+        <span class="c1"># π = (numpy.random.random(res.shape)*2-1)*1</span>
+        <span class="c1"># π /= norm2(π)</span>
+        <span class="n">π</span><span class="p">[:,:,:]</span> <span class="o">/=</span> <span class="n">lam</span>
+        <span class="n">π</span> <span class="o">=</span> <span class="n">d_filt_dx</span><span class="p">(</span><span class="n">π</span><span class="p">,</span> <span class="n">jres</span><span class="p">,</span> <span class="n">fut_S</span><span class="p">,</span> <span class="n">n_m</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">n_x</span><span class="p">,</span> <span class="n">dumdr</span><span class="p">)</span>
+        <span class="n">lam</span> <span class="o">=</span> <span class="n">norm2</span><span class="p">(</span><span class="n">π</span><span class="p">)</span>
+        <span class="n">lam_max</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">lam_max</span><span class="p">,</span> <span class="n">lam</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;- </span><span class="si">{}</span><span class="s1"> | </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">lam</span><span class="p">,</span> <span class="n">lam_max</span><span class="p">))</span>
+        <span class="n">lambdas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lam</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">lam</span><span class="p">,</span> <span class="n">lam_max</span><span class="p">,</span> <span class="n">lambdas</span><span class="p">)</span>
+
+
+<span class="kn">from</span> <span class="nn">dolo</span> <span class="kn">import</span> <span class="n">dprint</span>
+<span class="kn">from</span> <span class="nn">.results</span> <span class="kn">import</span> <span class="n">AlgoResult</span><span class="p">,</span> <span class="n">ImprovedTimeIterationResult</span>
+
+<span class="k">def</span> <span class="nf">improved_time_iteration</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;jac&#39;</span><span class="p">,</span> <span class="n">dr0</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dprocess</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">interp_method</span><span class="o">=</span><span class="s1">&#39;cubic&#39;</span><span class="p">,</span> <span class="n">mu</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">maxbsteps</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">tol</span><span class="o">=</span><span class="mf">1e-8</span><span class="p">,</span> <span class="n">smaxit</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">maxit</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
+            <span class="n">complementarities</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">compute_radius</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">invmethod</span><span class="o">=</span><span class="s1">&#39;iti&#39;</span><span class="p">,</span>
+            <span class="n">details</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">vprint</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="n">itprint</span> <span class="o">=</span> <span class="n">IterationsPrinter</span><span class="p">(</span>
+            <span class="p">(</span><span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="nb">int</span><span class="p">),</span>
+            <span class="p">(</span><span class="s1">&#39;f_x&#39;</span><span class="p">,</span> <span class="nb">float</span><span class="p">),</span>
+            <span class="p">(</span><span class="s1">&#39;d_x&#39;</span><span class="p">,</span> <span class="nb">float</span><span class="p">),</span>
+            <span class="p">(</span><span class="s1">&#39;Time_residuals&#39;</span><span class="p">,</span> <span class="nb">float</span><span class="p">),</span>
+            <span class="p">(</span><span class="s1">&#39;Time_inversion&#39;</span><span class="p">,</span> <span class="nb">float</span><span class="p">),</span>
+            <span class="p">(</span><span class="s1">&#39;Time_search&#39;</span><span class="p">,</span> <span class="nb">float</span><span class="p">),</span>
+            <span class="p">(</span><span class="s1">&#39;Lambda_0&#39;</span><span class="p">,</span> <span class="nb">float</span><span class="p">),</span>
+            <span class="p">(</span><span class="s1">&#39;N_invert&#39;</span><span class="p">,</span> <span class="nb">int</span><span class="p">),</span>
+            <span class="p">(</span><span class="s1">&#39;N_search&#39;</span><span class="p">,</span> <span class="nb">int</span><span class="p">),</span>
+        <span class="n">verbose</span><span class="o">=</span><span class="n">verbose</span><span class="p">)</span>
+    <span class="n">itprint</span><span class="o">.</span><span class="n">print_header</span><span class="p">(</span><span class="s1">&#39;Start Improved Time Iterations.&#39;</span><span class="p">)</span>
+
+
+    <span class="n">f</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="s1">&#39;arbitrage&#39;</span><span class="p">]</span>
+    <span class="n">g</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="s1">&#39;transition&#39;</span><span class="p">]</span>
+    <span class="n">x_lb</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="s1">&#39;controls_lb&#39;</span><span class="p">]</span>
+    <span class="n">x_ub</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="s1">&#39;controls_ub&#39;</span><span class="p">]</span>
+
+    <span class="n">parms</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">calibration</span><span class="p">[</span><span class="s1">&#39;parameters&#39;</span><span class="p">]</span>
+
+    <span class="n">grid</span><span class="p">,</span> <span class="n">dp</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">discretize</span><span class="p">()</span> 
+    <span class="n">endo_grid</span> <span class="o">=</span> <span class="n">grid</span><span class="p">[</span><span class="s1">&#39;endo&#39;</span><span class="p">]</span>
+    <span class="n">exo_grid</span> <span class="o">=</span> <span class="n">grid</span><span class="p">[</span><span class="s1">&#39;exo&#39;</span><span class="p">]</span>
+
+    <span class="n">n_m</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">dp</span><span class="o">.</span><span class="n">n_nodes</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">n_s</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">symbols</span><span class="p">[</span><span class="s1">&#39;states&#39;</span><span class="p">])</span>
+
+    <span class="k">if</span> <span class="n">interp_method</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;cubic&#39;</span><span class="p">,</span> <span class="s1">&#39;linear&#39;</span><span class="p">):</span>
+        <span class="n">ddr</span> <span class="o">=</span> <span class="n">DecisionRule</span><span class="p">(</span><span class="n">dp</span><span class="o">.</span><span class="n">grid</span><span class="p">,</span> <span class="n">endo_grid</span><span class="p">,</span> <span class="n">dprocess</span><span class="o">=</span><span class="n">dp</span><span class="p">,</span> <span class="n">interp_method</span><span class="o">=</span><span class="n">interp_method</span><span class="p">)</span>
+        <span class="n">ddr_filt</span> <span class="o">=</span> <span class="n">DecisionRule</span><span class="p">(</span><span class="n">dp</span><span class="o">.</span><span class="n">grid</span><span class="p">,</span> <span class="n">endo_grid</span><span class="p">,</span> <span class="n">dprocess</span><span class="o">=</span><span class="n">dp</span><span class="p">,</span> <span class="n">interp_method</span><span class="o">=</span><span class="n">interp_method</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Unsupported interpolation method.&quot;</span><span class="p">)</span>
+
+    <span class="c1"># s = ddr.endo_grid</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">endo_grid</span><span class="o">.</span><span class="n">nodes</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">n_x</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">symbols</span><span class="p">[</span><span class="s1">&#39;controls&#39;</span><span class="p">])</span>
+    <span class="n">x0</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">calibration</span><span class="p">[</span><span class="s1">&#39;controls&#39;</span><span class="p">][</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,]</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">n_m</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">dr0</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">i_m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_m</span><span class="p">):</span>
+            <span class="n">x0</span><span class="p">[</span><span class="n">i_m</span><span class="p">,:,:]</span> <span class="o">=</span> <span class="n">dr0</span><span class="o">.</span><span class="n">eval_is</span><span class="p">(</span><span class="n">i_m</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+    <span class="n">ddr</span><span class="o">.</span><span class="n">set_values</span><span class="p">(</span><span class="n">x0</span><span class="p">)</span>
+
+    <span class="n">steps</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">**</span><span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">maxbsteps</span><span class="p">)</span>
+
+    <span class="n">lb</span> <span class="o">=</span> <span class="n">x0</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">ub</span> <span class="o">=</span> <span class="n">x0</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">i_m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_m</span><span class="p">):</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="n">dp</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="n">i_m</span><span class="p">)</span>
+        <span class="n">lb</span><span class="p">[</span><span class="n">i_m</span><span class="p">,:]</span> <span class="o">=</span> <span class="n">x_lb</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">parms</span><span class="p">)</span>
+        <span class="n">ub</span><span class="p">[</span><span class="n">i_m</span><span class="p">,:]</span> <span class="o">=</span> <span class="n">x_ub</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">parms</span><span class="p">)</span>
+
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x0</span>
+
+    <span class="c1"># both affect the precision</span>
+
+    <span class="n">ddr</span><span class="o">.</span><span class="n">set_values</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+    <span class="c1">## memory allocation</span>
+
+    <span class="n">n_im</span> <span class="o">=</span> <span class="n">dp</span><span class="o">.</span><span class="n">n_inodes</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># we assume it is constant for now</span>
+
+    <span class="n">jres</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n_m</span><span class="p">,</span><span class="n">n_im</span><span class="p">,</span><span class="n">N</span><span class="p">,</span><span class="n">n_x</span><span class="p">,</span><span class="n">n_x</span><span class="p">))</span>
+    <span class="n">S_ij</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n_m</span><span class="p">,</span><span class="n">n_im</span><span class="p">,</span><span class="n">N</span><span class="p">,</span><span class="n">n_s</span><span class="p">))</span>
+
+
+    <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">maxit</span><span class="p">):</span>
+
+        <span class="n">jres</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="n">S_ij</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+        <span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+        <span class="c1"># compute derivatives and residuals:</span>
+        <span class="c1"># res: residuals</span>
+        <span class="c1"># dres: derivatives w.r.t. x</span>
+        <span class="c1"># jres: derivatives w.r.t. ~x</span>
+        <span class="c1"># fut_S: future states</span>
+
+        <span class="n">ddr</span><span class="o">.</span><span class="n">set_values</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="c1">#</span>
+        <span class="c1"># ub[ub&gt;100000] = 100000</span>
+        <span class="c1"># lb[lb&lt;-100000] = -100000</span>
+        <span class="c1">#</span>
+        <span class="c1"># sh_x = x.shape</span>
+        <span class="c1"># rr =euler_residuals(f,g,s,x,ddr,dp,parms, diff=False, with_jres=False,set_dr=True)</span>
+        <span class="c1"># print(rr.shape)</span>
+        <span class="c1">#</span>
+        <span class="c1"># from iti.fb import smooth_</span>
+        <span class="c1"># jj = smooth_(rr, x, lb, ub)</span>
+        <span class="c1">#</span>
+        <span class="c1"># print(&quot;Errors with complementarities&quot;)</span>
+        <span class="c1"># print(abs(jj.max()))</span>
+        <span class="c1">#</span>
+        <span class="c1"># exit()</span>
+        <span class="c1">#</span>
+
+        <span class="kn">from</span> <span class="nn">dolo.numeric.optimize.newton</span> <span class="kn">import</span> <span class="n">SerialDifferentiableFunction</span>
+        <span class="n">sh_x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span>
+        <span class="n">ff</span> <span class="o">=</span> <span class="n">SerialDifferentiableFunction</span><span class="p">(</span>
+                <span class="k">lambda</span> <span class="n">u</span><span class="p">:</span> <span class="n">euler_residuals</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">u</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">sh_x</span><span class="p">),</span><span class="n">ddr</span><span class="p">,</span><span class="n">dp</span><span class="p">,</span><span class="n">parms</span><span class="p">,</span> <span class="n">diff</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">with_jres</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">set_dr</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">sh_x</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
+            <span class="p">)</span>
+        <span class="n">res</span><span class="p">,</span> <span class="n">dres</span> <span class="o">=</span> <span class="n">ff</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">sh_x</span><span class="p">[</span><span class="mi">2</span><span class="p">])))</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">sh_x</span><span class="p">)</span>
+        <span class="n">dres</span> <span class="o">=</span> <span class="n">dres</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">sh_x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">sh_x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">sh_x</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">sh_x</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
+        <span class="n">junk</span><span class="p">,</span> <span class="n">jres</span><span class="p">,</span> <span class="n">fut_S</span> <span class="o">=</span> <span class="n">euler_residuals</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">ddr</span><span class="p">,</span><span class="n">dp</span><span class="p">,</span><span class="n">parms</span><span class="p">,</span> <span class="n">diff</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">with_jres</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">set_dr</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">jres</span><span class="o">=</span><span class="n">jres</span><span class="p">,</span> <span class="n">S_ij</span><span class="o">=</span><span class="n">S_ij</span><span class="p">)</span>
+
+        <span class="c1"># if there are complementerities, we modify derivatives</span>
+        <span class="k">if</span> <span class="n">complementarities</span><span class="p">:</span>
+            <span class="n">res</span><span class="p">,</span><span class="n">dres</span><span class="p">,</span><span class="n">jres</span> <span class="o">=</span> <span class="n">smooth</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="n">dres</span><span class="p">,</span><span class="n">jres</span><span class="p">,</span><span class="n">x</span><span class="o">-</span><span class="n">lb</span><span class="p">)</span>
+            <span class="n">res</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span>
+            <span class="n">dres</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span>
+            <span class="n">jres</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span>
+            <span class="n">res</span><span class="p">,</span><span class="n">dres</span><span class="p">,</span><span class="n">jres</span> <span class="o">=</span> <span class="n">smooth</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="n">dres</span><span class="p">,</span><span class="n">jres</span><span class="p">,</span><span class="n">ub</span><span class="o">-</span><span class="n">x</span><span class="p">,</span> <span class="n">pos</span><span class="o">=-</span><span class="mf">1.0</span><span class="p">)</span>
+            <span class="n">res</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span>
+            <span class="n">dres</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span>
+            <span class="n">jres</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span>
+
+        <span class="n">err_0</span> <span class="o">=</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">res</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+
+        <span class="c1"># premultiply by A</span>
+        <span class="n">jres</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">*=</span> <span class="o">-</span><span class="mf">1.0</span>
+
+        <span class="k">for</span> <span class="n">i_m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_m</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">j_m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_im</span><span class="p">):</span>
+                <span class="n">M</span> <span class="o">=</span> <span class="n">jres</span><span class="p">[</span><span class="n">i_m</span><span class="p">,</span><span class="n">j_m</span><span class="p">,:,:,:]</span>
+                <span class="n">X</span> <span class="o">=</span> <span class="n">dres</span><span class="p">[</span><span class="n">i_m</span><span class="p">,:,:,:]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+                <span class="n">sol</span> <span class="o">=</span> <span class="n">solve_tensor</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">M</span><span class="p">)</span>
+
+        <span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+        <span class="c1"># new version</span>
+        <span class="k">if</span> <span class="n">invmethod</span><span class="o">==</span><span class="s1">&#39;gmres&#39;</span><span class="p">:</span>
+            <span class="n">ddx</span> <span class="o">=</span> <span class="n">solve_gu</span><span class="p">(</span><span class="n">dres</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span> <span class="n">res</span><span class="o">.</span><span class="n">copy</span><span class="p">())</span>
+            <span class="n">L</span> <span class="o">=</span> <span class="n">Operator</span><span class="p">(</span><span class="n">jres</span><span class="p">,</span><span class="n">fut_S</span><span class="p">,</span><span class="n">ddr_filt</span><span class="p">)</span>
+            <span class="n">n0</span> <span class="o">=</span> <span class="n">L</span><span class="o">.</span><span class="n">counter</span>
+            <span class="n">L</span><span class="o">.</span><span class="n">addid</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="n">ttol</span> <span class="o">=</span> <span class="n">err_0</span><span class="o">/</span><span class="mi">100</span>
+            <span class="n">sol</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">sparse</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">gmres</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">ddx</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">tol</span><span class="o">=</span><span class="n">ttol</span><span class="p">)</span> <span class="c1">#, maxiter=1, restart=smaxit)</span>
+            <span class="n">lam0</span> <span class="o">=</span> <span class="mf">0.01</span>
+            <span class="n">nn</span> <span class="o">=</span> <span class="n">L</span><span class="o">.</span><span class="n">counter</span><span class="o">-</span><span class="n">n0</span>
+            <span class="n">tot</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">ddx</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># compute inversion</span>
+            <span class="n">tot</span><span class="p">,</span> <span class="n">nn</span><span class="p">,</span> <span class="n">lam0</span> <span class="o">=</span> <span class="n">invert_jac</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="n">dres</span><span class="p">,</span><span class="n">jres</span><span class="p">,</span><span class="n">fut_S</span><span class="p">,</span><span class="n">ddr_filt</span><span class="p">,</span><span class="n">tol</span><span class="o">=</span><span class="n">tol</span><span class="p">,</span><span class="n">maxit</span><span class="o">=</span><span class="n">smaxit</span><span class="p">,</span><span class="n">verbose</span><span class="o">=</span><span class="p">(</span><span class="n">verbose</span><span class="o">==</span><span class="s1">&#39;full&#39;</span><span class="p">))</span>
+
+        <span class="c1"># lam, lam_max, lambdas = radius_jac(res,dres,jres,fut_S,tol=tol,maxit=1000,verbose=(verbose==&#39;full&#39;),filt=ddr_filt)</span>
+
+        <span class="c1"># backsteps</span>
+        <span class="n">t3</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">i_bckstps</span><span class="p">,</span> <span class="n">lam</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">steps</span><span class="p">):</span>
+            <span class="n">new_x</span> <span class="o">=</span> <span class="n">x</span><span class="o">-</span><span class="n">tot</span><span class="o">*</span><span class="n">lam</span>
+            <span class="n">new_err</span> <span class="o">=</span> <span class="n">euler_residuals</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">new_x</span><span class="p">,</span><span class="n">ddr</span><span class="p">,</span><span class="n">dp</span><span class="p">,</span><span class="n">parms</span><span class="p">,</span><span class="n">diff</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">set_dr</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">complementarities</span><span class="p">:</span>
+                <span class="n">new_err</span> <span class="o">=</span> <span class="n">smooth_nodiff</span><span class="p">(</span><span class="n">new_err</span><span class="p">,</span> <span class="n">new_x</span><span class="o">-</span><span class="n">lb</span><span class="p">)</span>
+                <span class="n">new_err</span> <span class="o">=</span> <span class="n">smooth_nodiff</span><span class="p">(</span><span class="o">-</span><span class="n">new_err</span><span class="p">,</span> <span class="n">ub</span><span class="o">-</span><span class="n">new_x</span><span class="p">)</span>
+
+            <span class="n">new_err</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">new_err</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">new_err</span><span class="o">&lt;</span><span class="n">err_0</span><span class="p">:</span>
+                <span class="k">break</span>
+
+        <span class="n">err_2</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">tot</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+        <span class="n">t4</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">itprint</span><span class="o">.</span><span class="n">print_iteration</span><span class="p">(</span>
+            <span class="n">N</span> <span class="o">=</span> <span class="n">it</span><span class="p">,</span>
+            <span class="n">f_x</span> <span class="o">=</span> <span class="n">err_0</span><span class="p">,</span>
+            <span class="n">d_x</span> <span class="o">=</span> <span class="n">err_2</span><span class="p">,</span>
+            <span class="n">Time_residuals</span> <span class="o">=</span> <span class="n">t2</span><span class="o">-</span><span class="n">t1</span><span class="p">,</span>
+            <span class="n">Time_inversion</span> <span class="o">=</span> <span class="n">t3</span><span class="o">-</span><span class="n">t2</span><span class="p">,</span>
+            <span class="n">Time_search</span> <span class="o">=</span> <span class="n">t4</span><span class="o">-</span><span class="n">t3</span><span class="p">,</span>
+            <span class="n">Lambda_0</span> <span class="o">=</span> <span class="n">lam0</span><span class="p">,</span>
+            <span class="n">N_invert</span> <span class="o">=</span> <span class="n">nn</span><span class="p">,</span>
+            <span class="n">N_search</span> <span class="o">=</span> <span class="n">i_bckstps</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">err_0</span><span class="o">&lt;</span><span class="n">tol</span><span class="p">:</span>
+            <span class="k">break</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="n">new_x</span>
+
+    <span class="n">ddr</span><span class="o">.</span><span class="n">set_values</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+    <span class="n">itprint</span><span class="o">.</span><span class="n">print_finished</span><span class="p">()</span>
+
+    <span class="c1"># if compute_radius:</span>
+    <span class="c1">#     return ddx,L</span>
+    <span class="c1">#     lam, lam_max, lambdas = radius_jac(res,dres,jres,fut_S,ddr_filt,tol=tol,maxit=smaxit,verbose=(verbose==&#39;full&#39;))</span>
+    <span class="c1">#     return ddr, lam, lam_max, lambdas</span>
+    <span class="c1"># else:</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">details</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">ddr</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">ddx</span> <span class="o">=</span> <span class="n">solve_gu</span><span class="p">(</span><span class="n">dres</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span> <span class="n">res</span><span class="o">.</span><span class="n">copy</span><span class="p">())</span>
+        <span class="n">L</span> <span class="o">=</span> <span class="n">Operator</span><span class="p">(</span><span class="n">jres</span><span class="p">,</span><span class="n">fut_S</span><span class="p">,</span><span class="n">ddr_filt</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">compute_radius</span><span class="p">:</span>
+            <span class="n">lam</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">sparse</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eigs</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">return_eigenvectors</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="n">lam</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">lam</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">lam</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+        <span class="c1"># lam, lam_max, lambdas = radius_jac(res,dres,jres,fut_S,ddr_filt,tol=tol,maxit=smaxit,verbose=(verbose==&#39;full&#39;))</span>
+        <span class="k">return</span> <span class="n">ImprovedTimeIterationResult</span><span class="p">(</span>
+            <span class="n">ddr</span><span class="p">,</span>
+            <span class="n">it</span><span class="p">,</span>
+            <span class="n">err_0</span><span class="p">,</span>
+            <span class="n">err_2</span><span class="p">,</span>
+            <span class="n">err_0</span><span class="o">&lt;</span><span class="n">tol</span><span class="p">,</span>
+            <span class="n">complementarities</span><span class="p">,</span>
+            <span class="n">lam</span><span class="p">,</span>
+            <span class="kc">None</span><span class="p">,</span>
+            <span class="n">L</span>
+        <span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">euler_residuals</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">dr</span><span class="p">,</span> <span class="n">dp</span><span class="p">,</span> <span class="n">p_</span><span class="p">,</span> <span class="n">diff</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">with_jres</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                    <span class="n">set_dr</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">jres</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">S_ij</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+    <span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">set_dr</span><span class="p">:</span>
+        <span class="n">dr</span><span class="o">.</span><span class="n">set_values</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+    <span class="n">N</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">n_s</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">n_x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+
+    <span class="n">n_ms</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">dp</span><span class="o">.</span><span class="n">n_nodes</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>   <span class="c1"># number of markov states</span>
+    <span class="n">n_im</span> <span class="o">=</span> <span class="n">dp</span><span class="o">.</span><span class="n">n_inodes</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="n">res</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">with_jres</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">jres</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">jres</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n_ms</span><span class="p">,</span><span class="n">n_im</span><span class="p">,</span><span class="n">N</span><span class="p">,</span><span class="n">n_x</span><span class="p">,</span><span class="n">n_x</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">S_ij</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">S_ij</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n_ms</span><span class="p">,</span><span class="n">n_im</span><span class="p">,</span><span class="n">N</span><span class="p">,</span><span class="n">n_s</span><span class="p">))</span>
+
+    <span class="k">for</span> <span class="n">i_ms</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_ms</span><span class="p">):</span>
+        <span class="n">m_</span> <span class="o">=</span> <span class="n">dp</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="n">i_ms</span><span class="p">)</span>
+        <span class="n">xm</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">i_ms</span><span class="p">,:,:]</span>
+        <span class="k">for</span> <span class="n">I_ms</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_im</span><span class="p">):</span>
+            <span class="n">M_</span> <span class="o">=</span> <span class="n">dp</span><span class="o">.</span><span class="n">inode</span><span class="p">(</span><span class="n">i_ms</span><span class="p">,</span> <span class="n">I_ms</span><span class="p">)</span>
+            <span class="n">w</span> <span class="o">=</span> <span class="n">dp</span><span class="o">.</span><span class="n">iweight</span><span class="p">(</span><span class="n">i_ms</span><span class="p">,</span> <span class="n">I_ms</span><span class="p">)</span>
+            <span class="n">S</span> <span class="o">=</span> <span class="n">g</span><span class="p">(</span><span class="n">m_</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">xm</span><span class="p">,</span> <span class="n">M_</span><span class="p">,</span> <span class="n">p_</span><span class="p">,</span> <span class="n">diff</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="n">XM</span> <span class="o">=</span> <span class="n">dr</span><span class="o">.</span><span class="n">eval_ijs</span><span class="p">(</span><span class="n">i_ms</span><span class="p">,</span> <span class="n">I_ms</span><span class="p">,</span> <span class="n">S</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">with_jres</span><span class="p">:</span>
+                <span class="n">ff</span> <span class="o">=</span> <span class="n">SerialDifferentiableFunction</span><span class="p">(</span><span class="k">lambda</span> <span class="n">u</span><span class="p">:</span> <span class="n">f</span><span class="p">(</span><span class="n">m_</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">xm</span><span class="p">,</span><span class="n">M_</span><span class="p">,</span><span class="n">S</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="n">p_</span><span class="p">,</span><span class="n">diff</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+                <span class="n">rr</span><span class="p">,</span> <span class="n">rr_XM</span> <span class="o">=</span> <span class="n">ff</span><span class="p">(</span><span class="n">XM</span><span class="p">)</span>
+
+                <span class="n">rr</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">m_</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">xm</span><span class="p">,</span><span class="n">M_</span><span class="p">,</span><span class="n">S</span><span class="p">,</span><span class="n">XM</span><span class="p">,</span><span class="n">p_</span><span class="p">,</span><span class="n">diff</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+                <span class="n">jres</span><span class="p">[</span><span class="n">i_ms</span><span class="p">,</span><span class="n">I_ms</span><span class="p">,:,:,:]</span> <span class="o">=</span> <span class="n">w</span><span class="o">*</span><span class="n">rr_XM</span>
+                <span class="n">S_ij</span><span class="p">[</span><span class="n">i_ms</span><span class="p">,</span><span class="n">I_ms</span><span class="p">,:,:]</span> <span class="o">=</span> <span class="n">S</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">rr</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">m_</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">xm</span><span class="p">,</span><span class="n">M_</span><span class="p">,</span><span class="n">S</span><span class="p">,</span><span class="n">XM</span><span class="p">,</span><span class="n">p_</span><span class="p">,</span><span class="n">diff</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="n">res</span><span class="p">[</span><span class="n">i_ms</span><span class="p">,:,:]</span> <span class="o">+=</span> <span class="n">w</span><span class="o">*</span><span class="n">rr</span>
+
+    <span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+
+    <span class="k">if</span> <span class="n">with_jres</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">res</span><span class="p">,</span> <span class="n">jres</span><span class="p">,</span> <span class="n">S_ij</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">res</span>
+</code></pre></div>
+</div>
+</div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../js/mkapi.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega@5" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@3" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@5" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

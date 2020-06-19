@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>dolo.algos.improved_time_iteration - Dolo</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet">
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css" rel="stylesheet">
+        <link href="../../css/mkapi-common.css" rel="stylesheet">
+        <link href="../../css/mkapi-mkdocs.css" rel="stylesheet">
+        <link href="../../css/extra.css" rel="stylesheet">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Dolo</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../installation/" class="nav-link">Install</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../model_api.md" class="nav-link">Model API</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">API <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">dolo</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../dolo/" class="dropdown-item">dolo</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">dolo.algos</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../dolo.algos/" class="dropdown-item">dolo.algos</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">dolo.algos.improved_time_iteration</a>
+</li>
+            
+<li>
+    <a href="../dolo.algos.time_iteration/" class="dropdown-item">dolo.algos.time_iteration</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">dolo.compiler</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../dolo.compiler/" class="dropdown-item">dolo.compiler</a>
+</li>
+            
+<li>
+    <a href="../dolo.compiler.recipes/" class="dropdown-item">dolo.compiler.recipes</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">dolo.misc</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../dolo.misc/" class="dropdown-item">dolo.misc</a>
+</li>
+            
+<li>
+    <a href="../dolo.misc.termcolor/" class="dropdown-item">dolo.misc.termcolor</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">dolo.numeric.discretization</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../dolo.numeric.discretization/" class="dropdown-item">dolo.numeric.discretization</a>
+</li>
+            
+<li>
+    <a href="../dolo.numeric.discretization.discretization/" class="dropdown-item">dolo.numeric.discretization.discretization</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../dolo.algos/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../dolo.algos.time_iteration/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#doloalgosimproved_time_iteration" class="nav-link">dolo.algos.improved_time_iteration</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#doloalgosimproved_time_iterationoperator" class="nav-link">Operator</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<div class="mkapi-node" id="dolo.algos.improved_time_iteration">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h1 id="doloalgosimproved_time_iteration" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="../dolo.algos/#dolo.algos">dolo.algos</a>.</span><span class="mkapi-object-name">improved_time_iteration</span></h1>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/dolo.algos.improved_time_iteration#dolo.algos.improved_time_iteration" title="Source for dolo.algos.improved_time_iteration">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Do I need a docstring here ?</p></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="#dolo.algos.improved_time_iteration.Operator">Operator</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Special Linear Operator<a class="mkapi-src-link" href="../source/dolo.algos.improved_time_iteration#dolo.algos.improved_time_iteration.Operator" title="Source for dolo.algos.improved_time_iteration.Operator">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="dolo.algos.improved_time_iteration.Operator">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object class code top">
+    <div class="mkapi-object-kind class top">class</div>
+    <h2 id="doloalgosimproved_time_iterationoperator" class="mkapi-object-body class top"><code class="mkapi-object-prefix"><a href="#dolo.algos.improved_time_iteration">dolo.algos.improved_time_iteration</a>.</code><code class="mkapi-object-name">Operator</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">*args</code>, <code class="mkapi-object-signature">**kwargs</code><code class="mkapi-object-parenthesis">)</code></h2>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/dolo.algos.improved_time_iteration#dolo.algos.improved_time_iteration.Operator" title="Source for dolo.algos.improved_time_iteration.Operator">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section bases">
+      <div class="mkapi-section-name bases">
+          <span class="mkapi-section-name-body bases">Bases</span> 
+        </div>
+      <div class="mkapi-section-body bases">
+<span class="mkapi-base">scipy.sparse.linalg.interface.LinearOperator</span>
+</div>
+    </div>
+  <div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Special Linear Operator</p></div>
+    </div>
+  <div class="mkapi-section attributes">
+      <div class="mkapi-section-name attributes">
+          <span class="mkapi-section-name-body attributes">Attributes</span> 
+        </div>
+      <div class="mkapi-section-body attributes"><ul class="mkapi-items">
+
+
+
+
+<li class="readonly_property"><code class="mkapi-item-name">adjoint</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Hermitian adjoint.<br>
+Returns the Hermitian adjoint of self, aka the Hermitian
+conjugate or Hermitian transpose. For a complex matrix, the
+Hermitian adjoint is equal to the conjugate transpose.<br>
+Can be abbreviated self.H instead of self.adjoint().<span id="scipy.sparse.linalg.interface.LinearOperator.adjoint"></span><a class="mkapi-src-link" href="../source/scipy.sparse.linalg.interface#scipy.sparse.linalg.interface.LinearOperator.adjoint" title="Source for scipy.sparse.linalg.interface.LinearOperator.adjoint">&lt;/&gt;</a></span></li>
+
+<li><code class="mkapi-item-name">args</code>
+<span class="mkapi-item-type">(tuple)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">For linear operators describing products etc. of other linear
+operators, the operands of the binary operation.</span></li>
+
+
+
+
+
+
+
+<li class="readonly_property"><code class="mkapi-item-name">transpose</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Transpose this linear operator.<br>
+Returns a LinearOperator that represents the transpose of this one.
+Can be abbreviated self.T instead of self.transpose().<span id="scipy.sparse.linalg.interface.LinearOperator.transpose"></span><a class="mkapi-src-link" href="../source/scipy.sparse.linalg.interface#scipy.sparse.linalg.interface.LinearOperator.transpose" title="Source for scipy.sparse.linalg.interface.LinearOperator.transpose">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section methods">
+      <div class="mkapi-section-name methods">
+          <span class="mkapi-section-name-body methods">Methods</span> 
+        </div>
+      <div class="mkapi-section-body methods"><ul class="mkapi-items">
+<li class="method"><code class="mkapi-item-name"><a href="#scipy.sparse.linalg.interface.LinearOperator.adjoint">adjoint</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(A_H : LinearOperator)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Hermitian adjoint.<a class="mkapi-src-link" href="../source/scipy.sparse.linalg.interface#scipy.sparse.linalg.interface.LinearOperator.adjoint" title="Source for scipy.sparse.linalg.interface.LinearOperator.adjoint">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#scipy.sparse.linalg.interface.LinearOperator.dot">dot</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">x</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(Ax : array)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Matrix-matrix or matrix-vector multiplication.<a class="mkapi-src-link" href="../source/scipy.sparse.linalg.interface#scipy.sparse.linalg.interface.LinearOperator.dot" title="Source for scipy.sparse.linalg.interface.LinearOperator.dot">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#scipy.sparse.linalg.interface.LinearOperator.matmat">matmat</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">X</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(Y : {matrix, ndarray})</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Matrix-matrix multiplication.<a class="mkapi-src-link" href="../source/scipy.sparse.linalg.interface#scipy.sparse.linalg.interface.LinearOperator.matmat" title="Source for scipy.sparse.linalg.interface.LinearOperator.matmat">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#scipy.sparse.linalg.interface.LinearOperator.matvec">matvec</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">x</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(y : {matrix, ndarray})</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Matrix-vector multiplication.<a class="mkapi-src-link" href="../source/scipy.sparse.linalg.interface#scipy.sparse.linalg.interface.LinearOperator.matvec" title="Source for scipy.sparse.linalg.interface.LinearOperator.matvec">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#scipy.sparse.linalg.interface.LinearOperator.rmatmat">rmatmat</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">X</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(Y : {matrix, ndarray})</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Adjoint matrix-matrix multiplication.<a class="mkapi-src-link" href="../source/scipy.sparse.linalg.interface#scipy.sparse.linalg.interface.LinearOperator.rmatmat" title="Source for scipy.sparse.linalg.interface.LinearOperator.rmatmat">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#scipy.sparse.linalg.interface.LinearOperator.rmatvec">rmatvec</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">x</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(y : {matrix, ndarray})</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Adjoint matrix-vector multiplication.<a class="mkapi-src-link" href="../source/scipy.sparse.linalg.interface#scipy.sparse.linalg.interface.LinearOperator.rmatvec" title="Source for scipy.sparse.linalg.interface.LinearOperator.rmatvec">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#scipy.sparse.linalg.interface.LinearOperator.transpose">transpose</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Transpose this linear operator.<a class="mkapi-src-link" href="../source/scipy.sparse.linalg.interface#scipy.sparse.linalg.interface.LinearOperator.transpose" title="Source for scipy.sparse.linalg.interface.LinearOperator.transpose">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+  <div class="mkapi-members">
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="scipy.sparse.linalg.interface.LinearOperator.matvec">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h3 id="scipysparselinalginterfacelinearoperatormatvec" class="mkapi-object-body method"><code class="mkapi-object-name">matvec</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">x</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/scipy.sparse.linalg.interface#scipy.sparse.linalg.interface.LinearOperator.matvec" title="Source for scipy.sparse.linalg.interface.LinearOperator.matvec">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Matrix-vector multiplication.</p>
+<p>Performs the operation y=A*x where A is an MxN linear
+operator and x is a column vector or 1-d array.</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">x</code>
+<span class="mkapi-item-type">({matrix, ndarray})</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">An array with shape (N,) or (N,1).</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(y : {matrix, ndarray})</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>A matrix or ndarray with shape (M,) or (M,1) depending
+on the type and shape of the x argument.</p></div>
+    </div>
+  <div class="mkapi-section">
+      <div class="mkapi-section-body"><div class="admonition note">
+<p class="admonition-title">Notes</p>
+<p>This matvec wraps the user-specified matvec routine or overridden
+_matvec method to ensure that y has the correct shape and type.</p>
+</div></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="scipy.sparse.linalg.interface.LinearOperator.rmatvec">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h3 id="scipysparselinalginterfacelinearoperatorrmatvec" class="mkapi-object-body method"><code class="mkapi-object-name">rmatvec</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">x</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/scipy.sparse.linalg.interface#scipy.sparse.linalg.interface.LinearOperator.rmatvec" title="Source for scipy.sparse.linalg.interface.LinearOperator.rmatvec">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Adjoint matrix-vector multiplication.</p>
+<p>Performs the operation y = A^H * x where A is an MxN linear
+operator and x is a column vector or 1-d array.</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">x</code>
+<span class="mkapi-item-type">({matrix, ndarray})</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">An array with shape (M,) or (M,1).</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(y : {matrix, ndarray})</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>A matrix or ndarray with shape (N,) or (N,1) depending
+on the type and shape of the x argument.</p></div>
+    </div>
+  <div class="mkapi-section">
+      <div class="mkapi-section-body"><div class="admonition note">
+<p class="admonition-title">Notes</p>
+<p>This rmatvec wraps the user-specified rmatvec routine or overridden
+_rmatvec method to ensure that y has the correct shape and type.</p>
+</div></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="scipy.sparse.linalg.interface.LinearOperator.matmat">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h3 id="scipysparselinalginterfacelinearoperatormatmat" class="mkapi-object-body method"><code class="mkapi-object-name">matmat</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">X</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/scipy.sparse.linalg.interface#scipy.sparse.linalg.interface.LinearOperator.matmat" title="Source for scipy.sparse.linalg.interface.LinearOperator.matmat">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Matrix-matrix multiplication.</p>
+<p>Performs the operation y=A<em>X where A is an MxN linear
+operator and X dense N</em>K matrix or ndarray.</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">X</code>
+<span class="mkapi-item-type">({matrix, ndarray})</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">An array with shape (N,K).</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(Y : {matrix, ndarray})</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>A matrix or ndarray with shape (M,K) depending on
+the type of the X argument.</p></div>
+    </div>
+  <div class="mkapi-section">
+      <div class="mkapi-section-body"><div class="admonition note">
+<p class="admonition-title">Notes</p>
+<p>This matmat wraps any user-specified matmat routine or overridden
+_matmat method to ensure that y has the correct type.</p>
+</div></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="scipy.sparse.linalg.interface.LinearOperator.rmatmat">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h3 id="scipysparselinalginterfacelinearoperatorrmatmat" class="mkapi-object-body method"><code class="mkapi-object-name">rmatmat</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">X</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/scipy.sparse.linalg.interface#scipy.sparse.linalg.interface.LinearOperator.rmatmat" title="Source for scipy.sparse.linalg.interface.LinearOperator.rmatmat">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Adjoint matrix-matrix multiplication.</p>
+<p>Performs the operation y = A^H * x where A is an MxN linear
+operator and x is a column vector or 1-d array, or 2-d array.
+The default implementation defers to the adjoint.</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">X</code>
+<span class="mkapi-item-type">({matrix, ndarray})</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">A matrix or 2D array.</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(Y : {matrix, ndarray})</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>A matrix or 2D array depending on the type of the input.</p></div>
+    </div>
+  <div class="mkapi-section">
+      <div class="mkapi-section-body"><div class="admonition note">
+<p class="admonition-title">Notes</p>
+<p>This rmatmat wraps the user-specified rmatmat routine.</p>
+</div></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="scipy.sparse.linalg.interface.LinearOperator.dot">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h3 id="scipysparselinalginterfacelinearoperatordot" class="mkapi-object-body method"><code class="mkapi-object-name">dot</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">x</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/scipy.sparse.linalg.interface#scipy.sparse.linalg.interface.LinearOperator.dot" title="Source for scipy.sparse.linalg.interface.LinearOperator.dot">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Matrix-matrix or matrix-vector multiplication.</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">x</code>
+<span class="mkapi-item-type">(array_like)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">1-d or 2-d array, representing a vector or matrix.</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(Ax : array)</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>1-d or 2-d array (depending on the shape of x) that represents
+the result of applying this linear operator on x.</p></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="scipy.sparse.linalg.interface.LinearOperator.adjoint">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h3 id="scipysparselinalginterfacelinearoperatoradjoint" class="mkapi-object-body method"><code class="mkapi-object-name">adjoint</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/scipy.sparse.linalg.interface#scipy.sparse.linalg.interface.LinearOperator.adjoint" title="Source for scipy.sparse.linalg.interface.LinearOperator.adjoint">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Hermitian adjoint.</p>
+<p>Returns the Hermitian adjoint of self, aka the Hermitian
+conjugate or Hermitian transpose. For a complex matrix, the
+Hermitian adjoint is equal to the conjugate transpose.</p>
+<p>Can be abbreviated self.H instead of self.adjoint().</p></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(A_H : LinearOperator)</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>Hermitian adjoint of self.</p></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="scipy.sparse.linalg.interface.LinearOperator.transpose">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h3 id="scipysparselinalginterfacelinearoperatortranspose" class="mkapi-object-body method"><code class="mkapi-object-name">transpose</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/scipy.sparse.linalg.interface#scipy.sparse.linalg.interface.LinearOperator.transpose" title="Source for scipy.sparse.linalg.interface.LinearOperator.transpose">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Transpose this linear operator.</p>
+<p>Returns a LinearOperator that represents the transpose of this one.
+Can be abbreviated self.T instead of self.transpose().</p></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+  </div>
+
+</div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../js/mkapi.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega@5" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@3" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@5" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
